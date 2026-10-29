@@ -12,3 +12,13 @@ for file_name, type in vim.fs.dir(plugins_dir, { follow = true }) do
     require('custom.plugins.' .. module)
   end
 end
+
+-- rose-pine colorscheme
+vim.pack.add({
+	{
+		src = "https://github.com/rose-pine/neovim",
+		name = "rose-pine",
+	},
+})
+require("rose-pine").setup()
+vim.cmd("colorscheme rose-pine-moon")
